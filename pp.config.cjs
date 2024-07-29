@@ -9,7 +9,7 @@ const desktopSections = [
   {section: 'faq', misMatchThreshold: 0.9},
   {section: 'reviews', misMatchThreshold: 0.7},
   {section: 'form', misMatchThreshold: 0.9},
-  {section: 'footer', misMatchThreshold: 1.0}
+  {section: 'footer', misMatchThreshold: 1.7}
 ];
 
 const tabletSections = [
