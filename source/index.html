@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPERGYM</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Фадеева Виктория">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUPERGYM Фадеева Виктория</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicons/favicon-32x32.png">
+  <link rel="preload" href="#" type="font/woff2" as="font">
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="price">price</div>
-    <div data-test="games">games</div>
-    <div data-test="juri">juri</div>
-    <div data-test="features">features</div>
-    <div data-test="offers">offers</div>
-    <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+<body class="page-body">
+
+  <header class="main-header hero" data-test="hero">
+      <div class="hero__header">
+        <img class="hero__logotype" src="img/sprite/logotype.svg" width="100" height="20" alt="Логотип SUPERGYM">
+        <a class="hero__phone" href="tel:+88005555555">
+          8 800 555-55-55
+        </a>
+      </div>
+      <section class="hero__content">
+        <p class="hero__label">Омск</p>
+        <h1 class="hero__heading">ФИТНЕС ЦЕНТР</h1>
+        <ul class="hero__features">
+          <li class="hero__feature">Тренажёрный зал</li>
+          <li class="hero__feature">Групповые занятия</li>
+          <li class="hero__feature">Кардио-зона</li>
+        </ul>
+        <a class="hero__button button" href="#subscriptions">Купить абонемент</a>
+        <picture class="hero__image">
+          <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
+            srcset="img/hero-img-desktop.webp">
+          <source media="(min-width: 1366px)" idth="500" height="524" type="image/jpg"
+            srcset="img/hero-img-desktop.jpg">
+          <source width="324" height="390" type="image/webp" srcset="img/hero-img-tablet.webp">
+          <img class="hero__picture" src="img/hero-img-tablet.jpg" width="324" height="390" alt="Накачанный мужичок"
+            fetchpriority="high">
+        </picture>
+      </section>
+  </header>
+
+  <!--<div data-test="about">about</div>
+  <div data-test="price">price</div>
+  <div data-test="games">games</div>
+  <div data-test="juri">juri</div>
+  <div data-test="features">features</div>
+  <div data-test="offers">offers</div>
+  <div data-test="faq">faq</div>
+  <div data-test="reviews">reviews</div>
+  <div data-test="form">form</div>
+  <div data-test="footer">footer</div>
+  <script type="module" src="js/main.js"></script>-->
+</body>
 
 </html>

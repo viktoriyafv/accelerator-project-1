@@ -1,0 +1,30 @@
+.button {
+  display: block;
+  width: 206px;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  padding: 22px 20px;
+  border: 2px solid $color-primary-white;
+  outline: none;
+  text-decoration: none;
+  color: $color-primary-white;
+  background-color: transparent;
+  text-transform: uppercase;
+
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+  }
+}
