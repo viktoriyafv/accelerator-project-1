@@ -1,0 +1,89 @@
+.social-list {
+  @include reset-list;
+  @include flex;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 10px;
+  }
+}
+
+.social-list__item {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+
+.social-list__link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: $color-primary-white;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 14px 14px;
+    background-color: $background-footer;
+  }
+
+  &--vk::before {
+    mask-image: url("../../__spritemap#sprite-vk-view");
+  }
+
+  &--ok::before {
+    mask-image: url("../../__spritemap#sprite-ok-view");
+  }
+
+  &--reddit::before {
+    mask-image: url("../../__spritemap#sprite-reddit-view");
+  }
+
+  &:hover {
+    background-color: $color-hover-social;
+    outline: none;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $color-accent;
+    outline: none;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:active {
+    background-color: $background-dark;
+    outline: none;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-primary-white;
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $background-footer;
+    }
+  }
+}

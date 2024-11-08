@@ -14,16 +14,6 @@
   background-color: transparent;
   text-transform: uppercase;
 
-
-  &:active {
-    opacity: 0.5;
-  }
-
-  &:focus,
-  &:hover {
-    opacity: 0.5;
-  }
-
   &--disabled {
     cursor: not-allowed;
   }

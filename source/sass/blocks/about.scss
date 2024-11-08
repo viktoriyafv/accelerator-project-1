@@ -1,0 +1,142 @@
+.about {
+  padding: 40px 0;
+
+  p {
+    @include reset;
+    display: block;
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: left;
+    margin-bottom: 36px;
+  }
+}
+
+.about__wrapper {
+  width: 320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.about__heading {
+  @include reset;
+  display: block;
+  font-family: $primary-font;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.about__label {
+  @include reset;
+  display: block;
+  font-family: $secondary-font;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+.about__wrapper-picture {
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+
+.about__wrapper-video {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.about__button {
+  display: block;
+  padding: 0;
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  border: 2px solid rgba(237, 2, 51, 0.2);
+  border-radius: 50px;
+  inset: 0;
+  margin: auto;
+  background-color: inherit;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    mask-image: url("../../__spritemap#sprite-player-button-view");
+    mask-size: 52px 52px;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    background-image: $color-gradient-button;
+    z-index: 1;
+  }
+
+
+  &::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    mask-image: url("../../__spritemap#sprite-polygon-view");
+    mask-size: 12px 12px;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    background-color: $color-primary-white;
+    z-index: 2;
+  }
+
+  &:hover {
+    background-image: none;
+    border: 2px solid rgba(16, 38, 84, 0.6);
+
+    &::after {
+      background-color: $color-primary-white;
+    }
+
+    &::before {
+      background-color: rgba(16, 38, 84, 0.6);
+    }
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $background-dark;
+
+    &::after {
+      background-image: none;
+      background-color: $color-grey;
+    }
+
+    &::before {
+      background-color: $background-dark;
+    }
+  }
+
+  &:active {
+    outline: none;
+    border: 2px solid $background-dark;
+    opacity: 0.4;
+
+    &::after {
+      background-image: none;
+      background-color: $color-primary-white;
+    }
+
+    &::before {
+      background-color: $background-dark;
+    }
+  }
+}

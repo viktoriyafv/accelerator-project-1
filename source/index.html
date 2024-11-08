@@ -14,35 +14,137 @@
 
 <body class="page-body">
 
-  <header class="main-header hero" data-test="hero">
-      <div class="hero__header">
-        <img class="hero__logotype" src="img/sprite/logotype.svg" width="100" height="20" alt="Логотип SUPERGYM">
-        <a class="hero__phone" href="tel:+88005555555">
-          8 800 555-55-55
-        </a>
+  <header class="hero" data-test="hero">
+    <div class="hero__header">
+      <picture>
+        <source media="(min-width: 1366px)" width="130" height="26" type="image/svg+xml"
+          srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" width="110" height="22" type="image/svg+xml"
+          srcset="img/logotype-tablet.svg">
+        <img class="hero__logotype logotype" src="img/logotype-mobile.svg" width="100" height="20"
+          alt="Логотип Фитнес центра SUPERGYM">
+      </picture>
+      <a class="hero__phone" href="tel:+88005555555">
+        8 800 555-55-55
+      </a>
+    </div>
+    <section class="hero__content">
+      <h3 class="hero__label">Омск</h3>
+      <h1 class="hero__heading">ФИТНЕС ЦЕНТР</h1>
+      <p class="hero__features">
+        Тренажёрный зал
+        Групповые занятия
+        Кардио-зона
+      </p>
+      <a class="hero__button button" href="#subscriptions">Купить абонемент</a>
+      <div class="hero__wrapper-img">
+      <picture>
+        <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
+          srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x">
+        <source media="(min-width: 1366px)" width="500" height="524" type="image/jpg"
+          srcset="img/hero-img-desktop@1x.jpg 1x, img/hero-img-desktop@2x.jpg 2x">
+        <source width="324" height="390" type="image/webp"
+          srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x">
+        <img class="hero__picture" src="img/hero-img-tablet@1x.jpg" width="324" height="390"
+          srcset="img/hero-img-tablet@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
+      </picture>
       </div>
-      <section class="hero__content">
-        <p class="hero__label">Омск</p>
-        <h1 class="hero__heading">ФИТНЕС ЦЕНТР</h1>
-        <ul class="hero__features">
-          <li class="hero__feature">Тренажёрный зал</li>
-          <li class="hero__feature">Групповые занятия</li>
-          <li class="hero__feature">Кардио-зона</li>
-        </ul>
-        <a class="hero__button button" href="#subscriptions">Купить абонемент</a>
-        <picture class="hero__image">
-          <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
-            srcset="img/hero-img-desktop.webp">
-          <source media="(min-width: 1366px)" idth="500" height="524" type="image/jpg"
-            srcset="img/hero-img-desktop.jpg">
-          <source width="324" height="390" type="image/webp" srcset="img/hero-img-tablet.webp">
-          <img class="hero__picture" src="img/hero-img-tablet.jpg" width="324" height="390" alt="Накачанный мужичок"
-            fetchpriority="high">
-        </picture>
-      </section>
+    </section>
   </header>
+  <main>
+    <section class="about" data-test="about">
+      <div class="about__wrapper">
+        <h3 class="about__heading">Тренажёрный зал</h3>
+        <h6 class="about__label">Просторный зал площадью 900 кв/м</h6>
+        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный
+          зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+      </div>
+      <div class="about__wrapper-picture">
+        <picture>
+          <source media="(min-width: 1366px)" width="660" height="400" type="image/webp"
+            srcset="img/main-img-desktop@1x.webp 1x, img/main-img-desktop@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="660" height="400" type="image/jpg"
+            srcset="img/main-img-desktop@1x.jpg 1x, img/main-img-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="678" height="345" type="image/webp"
+            srcset="img/main-img-tablet@1x.webp 1x, img/main-img-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)" width="678" height="345" type="image/jpg"
+            srcset="img/main-img-tablet@1x.jpg 1x, img/main-img-tablet@2x.jpg 2x">
+          <source width="320" height="280" type="image/webp"
+            srcset="img/main-img-mobile@1x.webp 1x, img/main-img-mobile@2x.webp 2x">
+          <img class="about__picture" src="img/main-img-mobile@1x.jpg" width="320" height="280"
+            srcset="img/main-img-mobile@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
+        </picture>
+        </div>
+        <div class="about__wrapper-video">
+          <picture>
+            <source media="(min-width: 1366px)" width="360" height="230" type="image/webp"
+              srcset="img/video-img-desktop@1x.webp 1x, img/video-img-desktop@2x.webp 2x">
+            <source media="(min-width: 1366px)" width="360" height="230" type="image/jpg"
+              srcset="img/video-img-desktop@1x.jpg 1x, img/video-img-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="270" height="170" type="image/webp"
+              srcset="img/video-img-tablet@1x.webp 1x, img/video-img-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" width="270" height="170" type="image/jpg"
+              srcset="img/video-img-tablet@1x.jpg 1x, img/video-img-tablet@2x.jpg 2x">
+            <source width="320" height="170" type="image/webp"
+              srcset="img/video-img-mobile@1x.webp 1x, img/video-img-mobile@2x.webp 2x">
+            <img class="about__video" src="img/video-img-mobile@1x.jpg " width="320" height="170"
+              srcset="img/video-img-mobile@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
+          </picture>
+          <button class="about__button" type="button"></button>
+          </div>
+    </section>
+  </main>
+  <footer class="footer" data-test="footer">
+    <div class="footer__wrapper">
+      <picture>
+        <source media="(min-width: 1366px)" width="130" height="26" type="image/svg+xml"
+          srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" width="110" height="22" type="image/svg+xml"
+          srcset="img/logotype-tablet.svg">
+        <img class="footer__logotype logotype" src="img/logotype-mobile.svg" width="100" height="20"
+          alt="Логотип Фитнес центра SUPERGYM">
+      </picture>
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Услуги</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Абонименты</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Акции</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Тренеры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Расписание</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="footer__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--ok" href="https://htmlacademy.ru">
+            <span class="visually-hidden">Одноклассники</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--reddit" href="https://htmlacademy.ru">
+            <span class="visually-hidden">Reddit</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
-  <!--<div data-test="about">about</div>
+  <script src="js/iframe.js" defer></script>
+  <!--
   <div data-test="price">price</div>
   <div data-test="games">games</div>
   <div data-test="juri">juri</div>
@@ -51,7 +153,6 @@
   <div data-test="faq">faq</div>
   <div data-test="reviews">reviews</div>
   <div data-test="form">form</div>
-  <div data-test="footer">footer</div>
   <script type="module" src="js/main.js"></script>-->
 </body>
 
