@@ -1,0 +1,79 @@
+.time {
+  position: relative;
+  padding-bottom: 1222px;
+}
+
+.time__list {
+  @include reset-list;
+  @include flex;
+  position: absolute;
+  top: 55px;
+  gap: 35px;
+}
+
+.time__item {
+  display: block;
+  background-color: $color-primary-white;
+  padding: 50px 42px;
+}
+
+.time__title {
+  @include reset;
+  display: block;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.time__description {
+  display: block;
+  font-family: $secondary-font;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.time__price {
+  @include reset;
+  display: block;
+  position: relative;
+  font-family: $secondary-font;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: center;
+  color: $color-accent;
+  padding: 48px 71px 0 37px;
+  z-index: 1;
+
+  &::after {
+    content: attr(title);
+    position: absolute;
+    color: $color-price-shadow;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 120px;
+    text-align: center;
+    overflow-wrap: normal;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.48;
+    z-index: -1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 33px;
+    bottom: 19px;
+    right: 37px;
+    mask-image: url("../../__spritemap#sprite-ruble-view");
+    mask-size: 24px 33px;
+    mask-repeat: no-repeat;
+    background-color: $background-dark;
+  }
+}

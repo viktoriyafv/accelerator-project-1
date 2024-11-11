@@ -8,7 +8,7 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    @include flex-between;
+    @include flex-start;
     width: 768px;
     padding: 45px;
   }
@@ -30,7 +30,7 @@
 .footer__list {
   @include reset-list;
   @include flex;
-  row-gap: 5px;
+  row-gap: 20px;
   column-gap: 35px;
   margin-bottom: 30px;
 
@@ -51,7 +51,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  padding-bottom: 6px;
 
   @media (min-width: $tablet-width) {
     line-height: 22px;
@@ -60,7 +59,7 @@
   &:hover {
     border-bottom: 1px solid $color-primary-white;
     padding: 0;
-    padding-bottom: 5px;
+    margin-bottom: -1px;
   }
 
   &:focus,

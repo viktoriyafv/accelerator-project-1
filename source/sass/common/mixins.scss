@@ -30,6 +30,13 @@
   flex-wrap: wrap;
 }
 
+@mixin flex-start {
+  display: flex;
+  justify-content: space-between;
+  align-items:  flex-start;
+  flex-wrap: wrap;
+}
+
 @mixin flex-between {
   display: flex;
   justify-content: space-between;

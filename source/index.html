@@ -8,7 +8,12 @@
   <title>SUPERGYM Фадеева Виктория</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="favicons/favicon-32x32.png">
-  <link rel="preload" href="#" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/alumnisans/AlumniSans-Bold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/alumnisans/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/alumnisans/AlumniSans-SemiBold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed/RobotoCondensed-Bold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed/RobotoCondensed-Light.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed/RobotoCondensed-Regular.woff2" type="font/woff2" as="font">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
@@ -25,7 +30,7 @@
           alt="Логотип Фитнес центра SUPERGYM">
       </picture>
       <a class="hero__phone" href="tel:+88005555555">
-        8 800 555-55-55
+          8 800 555-55-55
       </a>
     </div>
     <section class="hero__content">
@@ -38,24 +43,25 @@
       </p>
       <a class="hero__button button" href="#subscriptions">Купить абонемент</a>
       <div class="hero__wrapper-img">
-      <picture>
-        <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
-          srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x">
-        <source media="(min-width: 1366px)" width="500" height="524" type="image/jpg"
-          srcset="img/hero-img-desktop@1x.jpg 1x, img/hero-img-desktop@2x.jpg 2x">
-        <source width="324" height="390" type="image/webp"
-          srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x">
-        <img class="hero__picture" src="img/hero-img-tablet@1x.jpg" width="324" height="390"
-          srcset="img/hero-img-tablet@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
-      </picture>
+        <picture>
+          <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
+            srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="500" height="524" type="image/jpg"
+            srcset="img/hero-img-desktop@1x.jpg 1x, img/hero-img-desktop@2x.jpg 2x">
+          <source width="324" height="390" type="image/webp"
+            srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x">
+          <img class="hero__picture" src="img/hero-img-tablet@1x.jpg" width="324" height="390"
+            srcset="img/hero-img-tablet@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
+        </picture>
       </div>
     </section>
   </header>
   <main>
     <section class="about" data-test="about">
+      <h2 class="visually-hidden">О нас</h2>
       <div class="about__wrapper">
-        <h3 class="about__heading">Тренажёрный зал</h3>
-        <h6 class="about__label">Просторный зал площадью 900 кв/м</h6>
+        <h3 class="about__title title">Тренажёрный зал</h3>
+        <h6 class="about__caption">Просторный зал площадью 900 кв/м</h6>
         <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный
           зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
       </div>
@@ -65,7 +71,7 @@
             srcset="img/main-img-desktop@1x.webp 1x, img/main-img-desktop@2x.webp 2x">
           <source media="(min-width: 1366px)" width="660" height="400" type="image/jpg"
             srcset="img/main-img-desktop@1x.jpg 1x, img/main-img-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="678" height="345" type="image/webp"
+          <source media="(min-width: 768px)" width="678" height="345" type="image/webp"
             srcset="img/main-img-tablet@1x.webp 1x, img/main-img-tablet@2x.webp 2x">
           <source media="(min-width: 768px)" width="678" height="345" type="image/jpg"
             srcset="img/main-img-tablet@1x.jpg 1x, img/main-img-tablet@2x.jpg 2x">
@@ -74,24 +80,101 @@
           <img class="about__picture" src="img/main-img-mobile@1x.jpg" width="320" height="280"
             srcset="img/main-img-mobile@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
         </picture>
-        </div>
-        <div class="about__wrapper-video">
-          <picture>
-            <source media="(min-width: 1366px)" width="360" height="230" type="image/webp"
-              srcset="img/video-img-desktop@1x.webp 1x, img/video-img-desktop@2x.webp 2x">
-            <source media="(min-width: 1366px)" width="360" height="230" type="image/jpg"
-              srcset="img/video-img-desktop@1x.jpg 1x, img/video-img-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" width="270" height="170" type="image/webp"
-              srcset="img/video-img-tablet@1x.webp 1x, img/video-img-tablet@2x.webp 2x">
-            <source media="(min-width: 768px)" width="270" height="170" type="image/jpg"
-              srcset="img/video-img-tablet@1x.jpg 1x, img/video-img-tablet@2x.jpg 2x">
-            <source width="320" height="170" type="image/webp"
-              srcset="img/video-img-mobile@1x.webp 1x, img/video-img-mobile@2x.webp 2x">
-            <img class="about__video" src="img/video-img-mobile@1x.jpg " width="320" height="170"
-              srcset="img/video-img-mobile@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
-          </picture>
-          <button class="about__button" type="button"></button>
-          </div>
+      </div>
+      <div class="about__wrapper-video">
+        <picture>
+          <source media="(min-width: 1366px)" width="360" height="230" type="image/webp"
+            srcset="img/video-img-desktop@1x.webp 1x, img/video-img-desktop@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="360" height="230" type="image/jpg"
+            srcset="img/video-img-desktop@1x.jpg 1x, img/video-img-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="270" height="170" type="image/webp"
+            srcset="img/video-img-tablet@1x.webp 1x, img/video-img-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)" width="270" height="170" type="image/jpg"
+            srcset="img/video-img-tablet@1x.jpg 1x, img/video-img-tablet@2x.jpg 2x">
+          <source width="320" height="170" type="image/webp"
+            srcset="img/video-img-mobile@1x.webp 1x, img/video-img-mobile@2x.webp 2x">
+          <img class="about__video" src="img/video-img-mobile@1x.jpg " width="320" height="170"
+            srcset="img/video-img-mobile@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
+        </picture>
+        <button class="about__button" type="button"><span class="visually-hidden">Кнопка play</span></button>
+      </div>
+    </section>
+    <section class="price" data-test="price">
+      <h2 class="visually-hidden">Прайс</h2>
+      <div class="price__wrapper">
+        <h3 class="price__title title">Абонименты</h3>
+        <ul class="price__list">
+          <li class="price__item time">
+            <button class="price__button price__button--active" type="button">1 месяц</button>
+            <ul class="time__list">
+              <li class="time__item">
+                <h4 class="time__title">С тренером</h4>
+                <p class="time__description">12 занятий</p>
+                <span class="time__price" title="5000">5000</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+              <li class="time__item">
+                <h4 class="time__title">Дневной</h4>
+                <p class="time__description">с 8:00 до 17:00</p>
+                <span class="time__price" title="1700">1700</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+              <li class="time__item">
+                <h4 class="time__title">Полный день</h4>
+                <p class="time__description">с 8:00 до 22:00</p>
+                <span class="time__price" title="2700">2700</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+            </ul>
+          </li>
+          <li class="price__item time">
+            <button class="price__button" type="button">6 месяцев</button>
+            <ul class="time__list visually-hidden">
+              <li class="time__item">
+                <h4 class="time__title">С тренером</h4>
+                <p class="time__description">12 занятий</p>
+                <span class="time__price" title="30 000">30 000</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+              <li class="time__item">
+                <h4 class="time__title">Дневной</h4>
+                <p class="time__description">с 8:00 до 17:00</p>
+                <span class="time__price" title="10 200">10 200</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+              <li class="time__item">
+                <h4 class="time__title">Полный день</h4>
+                <p class="time__description">с 8:00 до 22:00</p>
+                <span class="time__price" title="16 200">16 200</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+            </ul>
+          </li>
+          <li class="price__item time">
+            <button class="price__button" type="button">12 месяцев</button>
+            <ul class="time__list visually-hidden">
+              <li class="time__item">
+                <h4 class="time__title">С тренером</h4>
+                <p class="time__description">12 занятий</p>
+                <span class="time__price" title="60 000">60 000</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+              <li class="time__item">
+                <h4 class="time__title">Дневной</h4>
+                <p class="time__description">с 8:00 до 17:00</p>
+                <span class="time__price" title="20 400">20 400</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+              <li class="time__item">
+                <h4 class="time__title">Полный день</h4>
+                <p class="time__description">с 8:00 до 22:00</p>
+                <span class="time__price" title="32 400">32 400</span>
+                <button class="time__button button" type="button">Купить абонемент</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
   <footer class="footer" data-test="footer">

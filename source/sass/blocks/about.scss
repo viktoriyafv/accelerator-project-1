@@ -19,18 +19,12 @@
   margin: 0 auto;
 }
 
-.about__heading {
-  @include reset;
-  display: block;
-  font-family: $primary-font;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 32px;
+.about__title {
   text-align: left;
   margin-bottom: 12px;
 }
 
-.about__label {
+.about__caption {
   @include reset;
   display: block;
   font-family: $secondary-font;
