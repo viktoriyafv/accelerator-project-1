@@ -1,6 +1,7 @@
 .social-list {
   @include reset-list;
   @include flex;
+
   gap: 20px;
 
   @media (min-width: $tablet-width) {

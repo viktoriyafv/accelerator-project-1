@@ -5,6 +5,7 @@
 
 .hero__header {
   @include flex-start;
+
   width: $mobile-width;
   margin: 0 auto;
   padding: 16px 15px;
@@ -23,6 +24,7 @@
 
 .hero__phone {
   @include reset-link;
+
   font-family: $secondary-font;
   font-weight: 700;
   color: $color-primary-white;
@@ -97,6 +99,7 @@
 
 .hero__label {
   @include reset;
+
   display: block;
   font-family: $primary-font;
   font-weight: 600;
@@ -122,6 +125,7 @@
 
 .hero__heading {
   @include reset;
+
   display: block;
   text-align: right;
   font-family: $primary-font;
@@ -147,6 +151,7 @@
 
 .hero__features {
   @include reset;
+
   display: block;
   font-family: $secondary-font;
   text-align: right;
@@ -166,6 +171,7 @@
 
 .hero__button {
   @include reset-link;
+
   grid-area: 3 / 1 / 4 / 3;
   width: 290px;
   margin-top: 34px;
@@ -210,6 +216,7 @@
 
 .hero__wrapper-img {
   @include reset;
+
   display: none;
 
   @media (min-width: $tablet-width) {

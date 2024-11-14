@@ -9,6 +9,7 @@
 
   @media (min-width: $tablet-width) {
     @include flex-start;
+
     width: 768px;
     padding: 45px;
   }
@@ -30,6 +31,7 @@
 .footer__list {
   @include reset-list;
   @include flex;
+
   row-gap: 20px;
   column-gap: 35px;
   margin-bottom: 30px;
@@ -46,6 +48,7 @@
 
 .footer__link {
   @include reset-link;
+
   font-family: $secondary-font;
   color: $color-primary-white;
   font-weight: 400;
