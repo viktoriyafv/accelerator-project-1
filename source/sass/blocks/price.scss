@@ -40,6 +40,7 @@
 .price__list {
   @include reset-list;
   @include flex-between;
+
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -69,6 +70,7 @@
 
 .price__button {
   @include reset;
+
   background-color: inherit;
   font-family: $secondary-font;
   color: rgba(16, 38, 84, 0.5);
@@ -111,10 +113,9 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    object-fit: cover;
     width: 275px;
     height: 328px;
-    content: '';
+    content: "";
     position: absolute;
     transform: rotate(150deg);
     right: -15px;

@@ -47,6 +47,5 @@
 @mixin gradient-text {
   background: $color-gradient-text;
   background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
