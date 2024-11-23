@@ -8,13 +8,6 @@ function createParagraph() {
   paragraphWrapper.appendChild(paragraph);
 }
 
-
-if (window.innerWidth >= 1366) {
-  createParagraph(); // при изменении размеров браузера
-} else {
-  paragraphWrapper.removeChild(paragraph);
-}
-
 function debounce(callback, timeoutDelay = 500) {
   let timeoutId;
   return (...rest) => {
@@ -23,12 +16,18 @@ function debounce(callback, timeoutDelay = 500) {
   };
 }
 
-const debouncedResize = debounce(() => {
+const debouncedResize = debounce((evt) => {
+
   if (window.innerWidth >= 1366) {
     createParagraph();
   } else {
-    paragraphWrapper.removeChild(paragraph);
+    evt.preventDefault();
+
+    if (paragraphWrapper.contains(paragraph)) {
+      paragraphWrapper.removeChild(paragraph);
+    }
   }
-}, 20);
+}, 2);
 
 window.addEventListener('resize', debouncedResize);
+window.addEventListener('loading', debouncedResize);

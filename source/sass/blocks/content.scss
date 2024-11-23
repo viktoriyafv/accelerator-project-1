@@ -1,44 +1,30 @@
-.ticketseason {
-  padding-bottom: 1222px;
+.content {
+  display: none;
 
-  @media (min-width: $tablet-width) {
-    padding-bottom: 1460px;
-  }
+  &--active {
+    @include reset-list;
+    @include flex;
 
-  @media (min-width: $desktop-width) {
-    padding-bottom: 447px;
-  }
-}
+    gap: 35px;
 
-.ticketseason__list {
-  @include reset-list;
-  @include flex;
+    @media (min-width: $tablet-width) {
+      width: 380px;
+      gap: 40px;
+    }
 
-  position: absolute;
-  left: 0;
-  top: 56px;
-  gap: 35px;
+    @media (min-width: $desktop-width) {
+      @include flex-between;
 
-  @media (min-width: $tablet-width) {
-    width: 380px;
-    gap: 40px;
-    top: 73px;
-    left: -35px;
-    z-index: 10;
-  }
-
-  @media (min-width: $desktop-width) {
-    justify-content: space-between;
-    width: 1160px;
-    left: -405px;
-    top: 70px;
+      width: auto;
+    }
   }
 }
 
-.ticketseason__item {
+.content__item {
   display: block;
   background-color: $color-primary-white;
   padding: 50px 42px;
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
     padding: 65px;
@@ -54,7 +40,7 @@
   }
 }
 
-.ticketseason__item:focus-within {
+.content__item:focus-within {
   padding: 43px 35px;
   border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 30;
   border-style: solid;
@@ -65,7 +51,7 @@
   }
 }
 
-.ticketseason__title {
+.content__title {
   @include reset;
 
   display: block;
@@ -89,7 +75,7 @@
   }
 }
 
-.ticketseason__description {
+.content__description {
   @include reset;
 
   display: block;
@@ -108,7 +94,7 @@
   }
 }
 
-.ticketseason__price {
+.content__price {
   @include reset;
 
   display: block;
@@ -182,7 +168,7 @@
   }
 }
 
-.ticketseason__button {
+.content__button {
   padding: 25px 42px;
   border: 2px solid $background-dark;
   color: $background-dark;

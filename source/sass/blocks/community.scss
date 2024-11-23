@@ -1,0 +1,58 @@
+.community {
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(90deg, $primary-color 50%, $color-primary-white 50%);
+    position: relative;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 1px;
+      background-color: $color-hover-social;
+    }
+  }
+}
+
+.community__wrapper {
+  @media (min-width: $desktop-width) {
+    width: 1366px;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.community__form {
+  background-color: $primary-color;
+  color: $color-primary-white;
+  padding: 70px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 683px;
+    background-color: inherit;
+    padding: 60px 103px;
+  }
+}
+
+.community__contact {
+  width: 320px;
+  padding: 40px 15px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 60px 164px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    padding: 59px 103px 60px;
+  }
+}

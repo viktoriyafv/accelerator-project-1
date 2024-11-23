@@ -14,6 +14,7 @@ ButtonVideo.addEventListener('click', () => {
   iframe.style.inset = '0';
   iframe.style.margin = 'auto';
   iframe.style.zIndex = '200';
+  iframe.setAttribute('allow', 'autoplay');
 
   aboutVideo.style.display = 'none';
   ButtonVideo.style.display = 'none';
