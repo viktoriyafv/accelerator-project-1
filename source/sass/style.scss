@@ -1,4 +1,29 @@
 // Vendor
-// ---------------------------------
+@import "./vendor/normalize";
 
-@import "vendor/normalize";
+/* GLOBAL */
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/fonts";
+@import "./common/global";
+
+/* BLOCKS */
+@import "./blocks/page-body";
+@import "./blocks/title";
+@import "./blocks/button";
+@import "./blocks/logotype";
+@import "./blocks/hero";
+@import "./blocks/about";
+@import "./blocks/price";
+@import "./blocks/content";
+@import "./blocks/advt-games";
+@import "./blocks/juri";
+@import "./blocks/features";
+@import "./blocks/advt-offers";
+@import "./blocks/community";
+@import "./blocks/faq";
+@import "./blocks/reviews";
+@import "./blocks/form";
+@import "./blocks/contact";
+@import "./blocks/footer";
+@import "./blocks/social-list";

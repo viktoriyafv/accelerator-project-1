@@ -1,0 +1,313 @@
+.advt-offers {
+  padding: 40px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 60px 45px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    width: 1366px;
+    padding: 100px 103px;
+  }
+}
+
+.advt-offers__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+    grid-area: 1 / 1 / 2 / 3;
+  }
+}
+
+.advt-offers__wrapper {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 678px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
+.advt-offers__content {
+  background-color: $bacground-banner;
+  color: $color-primary-white;
+  font-family: $secondary-font;
+  padding: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 278px;
+    height: 462px;
+    padding: 40px 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    height: 460px;
+    padding: 40px 45px;
+  }
+
+  h4 {
+    @include reset;
+
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 9px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  h5 {
+    @include reset;
+
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 28px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 70px;
+      line-height: 70px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+  }
+
+  p {
+    @include reset;
+
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 28px;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 24px;
+      text-align: left;
+      margin-bottom: 160px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 156px;
+    }
+  }
+}
+
+.advt-offers__button {
+  @include reset-link;
+
+  width: 73px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  color: $color-primary-white;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $color-primary-white;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    opacity: 1;
+    width: 98px;
+    margin-top: -10px;
+    margin-bottom: -4px;
+    padding: 9px;
+    border: 1px solid $color-primary-white;
+
+    @media (min-width: $tablet-width) {
+      margin: -10px 0 -5px -10px;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &--promotion {
+    color: $color-plus;
+    border-bottom: 1px solid $color-plus;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      bottom: 20px;
+      left: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: 40px;
+      left: 45px;
+    }
+
+    &:focus,
+    &:focus-visible {
+      border: 1px solid $color-plus;
+
+      @media (min-width: $tablet-width) {
+        bottom: 16px;
+        left: 10px;
+        margin: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        bottom: 36px;
+        left: 35px;
+      }
+    }
+  }
+}
+
+.advt-offers__picture-wrapper {
+  width: 320px;
+  height: auto;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+  }
+}
+
+.advt-offers__picture {
+  display: block;
+  width: 320px;
+  height: 360px;
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+    height: 462px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    height: 460px;
+  }
+}
+
+.advt-offers__promotion-wrapper {
+  @media (min-width: $tablet-width) {
+    @include flex-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: 2 / 2 / 3 / 3;
+    display: block;
+    margin-top: 82px;
+  }
+}
+
+
+.advt-offers__promotion {
+  width: 290px;
+  font-family: $secondary-font;
+  text-align: center;
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 7;
+  border-style: solid;
+  border-width: 7px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    min-height: 188px;
+    position: relative;
+    text-align: left;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+    min-height: 174px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h4 {
+    @include reset;
+
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 26px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    @include reset;
+
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 0;
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 60px;
+    }
+  }
+}
