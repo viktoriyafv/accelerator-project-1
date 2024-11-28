@@ -48,12 +48,14 @@
   }
 
   &:hover {
-    color: rgba(28, 51, 116, 0.5);
+    color: $color-plus;
+    opacity: 0.5;
   }
 
   &:focus,
   &:focus-visible {
     color: $color-plus;
+    opacity: 1;
   }
 
   &:active {
@@ -62,8 +64,9 @@
     margin-bottom: -1px;
   }
 
-  &:disabled {
-    opacity: 0.4;
+  &--disabled {
+    opacity: 0.5;
+    color: $color-secondary-white;
     cursor: not-allowed;
   }
 }
@@ -106,11 +109,10 @@
   font-size: 32px;
   line-height: 32px;
   letter-spacing: 1px;
-  margin-left: auto;
+  text-align: right;
   grid-area: 1 / 2 / 2 / 3;
 
   @media (min-width: $tablet-width) {
-    text-align: right;
     font-size: 41px;
     line-height: 42px;
     margin-top: 31px;
@@ -156,7 +158,6 @@
   font-family: $secondary-font;
   text-align: right;
   font-weight: 400;
-  font-size: 14px;
   line-height: 20px;
   grid-area: 1 / 1 / 3 / 2;
   align-self: end;
@@ -191,25 +192,7 @@
     margin-bottom: 54px;
   }
 
-  &:hover {
-    color: $color-accent;
-    background-color: $color-primary-white;
-  }
-
-  &:focus,
-  &:focus-visible {
-    color: $color-accent;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid $color-black;
-    outline: none;
-  }
-
-  &:active {
-    color: $background-dark;
-    background-color: $color-primary-white;
-  }
-
-  &:disabled {
+  &--disabled {
     opacity: 0.5;
     color: $color-primary-white;
     border: 2px solid $color-primary-white;

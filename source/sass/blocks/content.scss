@@ -169,32 +169,41 @@
 }
 
 .content__button {
-  padding: 25px 42px;
+  padding: 25px 5px;
   border: 2px solid $background-dark;
   color: $background-dark;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 250px;
-    padding: 25px 44px;
+    padding: 25px 5px;
   }
 
   @media (min-width: $desktop-width) {
     width: 230px;
   }
 
-  &:hover,
   &:focus,
   &:focus-visible {
+    background-image: linear-gradient(97.05deg, rgba(237, 2, 51, 0.8) 17.6%, rgba(0, 62, 183, 0.8) 95.31%);
+    background-color: none;
+    border: 2px solid #000000;
+    color: $color-primary-white;
+  }
+
+  &:hover {
     background-image: $color-gradient-button;
     background-color: none;
     border: none;
     color: $color-primary-white;
-    padding: 27px 42px;
+    padding: 27px 5px;
+  }
 
-    @media (min-width: $tablet-width) {
-      padding: 27px 44px;
-      width: 195px;
-    }
+  &:active {
+    background-image: $color-gradient-button;
+    background-color: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 27px 5px;
   }
 }

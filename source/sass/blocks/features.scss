@@ -27,6 +27,7 @@
 
   @media (min-width: $tablet-width) {
     @include flex-between;
+
     gap: 40px 30px;
     width: 768px;
     padding: 0 45px;

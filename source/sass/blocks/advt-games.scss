@@ -175,6 +175,19 @@
   @media (min-width: $desktop-width) {
     width: 340px;
   }
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+      padding: 27px 15px;
+    }
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    opacity: 0.3;
+  }
 }
 
 .advt-games__picture-wrapper {

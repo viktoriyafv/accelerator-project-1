@@ -87,17 +87,22 @@
     border: none;
   }
 
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    border: 1px solid $primary-color;
-  }
-
   &:active {
     background-image: $color-gradient-button;
     color: $color-primary-white;
     border: none;
     opacity: 1;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $primary-color;
+    padding: 14px 22px;
+
+    @media (min-width: $desktop-width) {
+      padding: 18px 48px;
+    }
   }
 }
 
@@ -261,7 +266,7 @@
 
   &:disabled {
     cursor: not-allowed;
-    border: 1px solid #1C3374;
+    border: 1px solid #1c3374;
     background-color: $color-plus;
     opacity: 0.3;
 
@@ -272,49 +277,49 @@
   }
 }
 
-  .faq__item--active .faq__list-button {
+.faq__item--active .faq__list-button {
+  background-color: $color-plus;
+  border: none;
+
+  &::before {
+    background-color: $color-primary-white;
+    mask-image: none;
+    height: 2px;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 1px;
+    }
+  }
+
+  &:hover {
     background-color: $color-plus;
-    border: none;
 
     &::before {
       background-color: $color-primary-white;
-      mask-image: none;
-      height: 2px;
-
-      @media (min-width: $tablet-width) {
-        width: 20px;
-        height: 1px;
-      }
-    }
-
-    &:hover {
-      background-color: $color-plus;
-
-      &::before {
-        background-color: $color-primary-white;
-      }
-    }
-
-    &:focus,
-    &:focus-visible {
-      border: 1px solid $color-plus;
-      background-color: $color-hover-social;
-      outline: none;
-
-      &::before {
-        background-color: $color-primary-white;
-      }
-    }
-
-    &:disabled {
-      cursor: not-allowed;
-      border: 1px solid #1C3374;
-      background-color: $color-plus;
-      opacity: 0.3;
-
-      &::before {
-        background-color: $color-plus;
-        opacity: 0.3;
-      }
     }
   }
+
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $color-plus;
+    background-color: $color-hover-social;
+    outline: none;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border: 1px solid #1c3374;
+    background-color: $color-plus;
+    opacity: 0.3;
+
+    &::before {
+      background-color: $color-plus;
+      opacity: 0.3;
+    }
+  }
+}

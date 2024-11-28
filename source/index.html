@@ -7,7 +7,7 @@
   <meta name="author" content="Фадеева Виктория">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUPERGYM Фадеева Виктория</title>
-  <link rel="icon" href="public/favicon.ico">
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
   <link rel="manifest" href="manifest.json">
@@ -53,17 +53,16 @@
             srcset="img/hero-img-desktop@1x.webp 1x, img/hero-img-desktop@2x.webp 2x">
           <source media="(min-width: 1366px)" width="500" height="524" type="image/jpg"
             srcset="img/hero-img-desktop@1x.jpg 1x, img/hero-img-desktop@2x.jpg 2x">
-          <source width="324" height="390" type="image/webp"
+          <source media="(min-width: 768px)" width="324" height="390" type="image/webp"
             srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x">
-          <img class="hero__picture" src="img/hero-img-tablet@1x.jpg" width="324" height="390"
-            srcset="img/hero-img-tablet@2x.jpg 2x" alt="Накачанный мужичок" fetchpriority="high">
+          <source media="(min-width: 768px)" width="324" height="390" type="image/webp" srcset="img/hero-img-tablet@1x.jpg 1x, img/hero-img-tablet@2x.jpg 2x">
+          <img class="hero__picture" src="#" width="324" height="390" alt="Накачанный мужичок" fetchpriority="high">
         </picture>
       </div>
     </section>
   </header>
   <main>
     <section class="about" data-test="about">
-      <h2 class="visually-hidden">О нас</h2>
       <div class="about__wrapper">
         <h3 class="about__title title">Тренажёрный зал</h3>
         <h4 class="about__caption">Просторный зал площадью 900 кв/м</h4>
@@ -99,7 +98,7 @@
           <source width="320" height="170" type="image/webp"
             srcset="img/video-img-mobile@1x.webp 1x, img/video-img-mobile@2x.webp 2x">
           <img class="about__video" src="img/video-img-mobile@1x.jpg" width="320" height="170"
-            srcset="img/video-img-mobile@2x.jpg 2x" alt="Тренажерный зал" loading="lazy" fetchpriority="low">
+            srcset="img/video-img-mobile@2x.jpg 2x" alt="Тренажерный зал" fetchpriority="high">
         </picture>
         <button class="about__button" type="button"><span class="visually-hidden">Кнопка play</span></button>
       </div>
@@ -209,7 +208,7 @@
             <source width="290" height="290" type="image/webp"
               srcset="img/banner-game-mobile@1x.webp 1x, img/banner-game-mobile@2x.webp 2x">
             <img class="advt-games__picture" src="img/banner-game-mobile@1x.jpg" width="290" height="290"
-              srcset="img/banner-game-mobile@2x.jpg 2x" alt="Плавец в брызгах воды" loading="lazy" fetchpriority="low">
+              srcset="img/banner-game-mobile@2x.jpg 2x" alt="Плавец в брызгах воды" loading="lazy">
           </picture>
         </div>
       </div>
@@ -226,7 +225,7 @@
                     <source width="260" height="300" type="image/webp"
                       srcset="img/trener-1@1x.webp 1x, img/trener-1@2x.webp 2x">
                     <img class="juri__image" src="img/trener-1@1x.jpg" width="260" height="300"
-                      srcset="img/trener-1@2x.jpg 2x" alt="Тренер Анна Павлова." loading="lazy" fetchpriority="high">
+                      srcset="img/trener-1@2x.jpg 2x" alt="Тренер Анна Павлова." loading="lazy">
                   </picture>
                   <figcaption class="juri__body">
                     <h3 class="juri__heading">Анна Павлова</h3>
@@ -247,7 +246,7 @@
                     <source width="260" height="300" type="image/webp"
                       srcset="img/trener-2@1x.webp 1x, img/trener-2@2x.webp 2x">
                     <img class="juri__image" src="img/trener-2@1x.jpg" width="260" height="300"
-                      srcset="img/trener-2@2x.jpg 2x" alt="Тренер Алексей Лавров." loading="lazy">
+                      srcset="img/trener-2@2x.jpg 2x" alt="Тренер Алексей Лавров." loading="lazy" fetchpriority="low">
                   </picture>
                   <figcaption class="juri__body">
                     <h3 class="juri__heading">Алексей Лавров</h3>
@@ -268,7 +267,7 @@
                     <source width="260" height="300" type="image/webp"
                       srcset="img/trener-3@1x.webp 1x, img/trener-3@2x.webp 2x">
                     <img class="juri__image" src="img/trener-3@1x.jpg" width="260" height="300"
-                      srcset="img/trener-3@2x.jpg 2x" alt="Тренер Александр Пашков." loading="lazy">
+                      srcset="img/trener-3@2x.jpg 2x" alt="Тренер Александр Пашков." loading="lazy" fetchpriority="low">
                   </picture>
                   <figcaption class="juri__body">
                     <h3 class="juri__heading">Александр Пашков</h3>
@@ -289,7 +288,7 @@
                     <source width="260" height="300" type="image/webp"
                       srcset="img/trener-4@1x.webp 1x, img/trener-4@2x.webp 2x">
                     <img class="juri__image" src="img/trener-4@1x.jpg" width="260" height="300"
-                      srcset="img/trener-4@2x.jpg 2x" alt="Тренер Мария Кетова." loading="lazy">
+                      srcset="img/trener-4@2x.jpg 2x" alt="Тренер Мария Кетова." loading="lazy" fetchpriority="low">
                   </picture>
                   <figcaption class="juri__body">
                     <h3 class="juri__heading">Мария Кетова</h3>
@@ -390,10 +389,10 @@
               </li>
             </ul>
           </div>
-          <button class="juri__button juri__button--prev button__swiper button__swiper--prev" type="button">
+          <button class="juri__button juri__button--prev button button-swiper button-swiper--prev" type="button">
             <span class="visually-hidden">Предыдущий слайд.</span>
           </button>
-          <button class="juri__button juri__button--next button__swiper button__swiper--next" type="button">
+          <button class="juri__button juri__button--next button button-swiper button-swiper--next" type="button">
             <span class="visually-hidden">Следующий слайд.</span>
           </button>
         </div>
@@ -455,7 +454,7 @@
             <source width="320" height="2360" type="image/webp"
               srcset="img/girl-img-mobile@1x.webp 1x, img/girl-img-mobile@2x.webp 2x">
             <img class="advt-offers__picture" src="img/girl-img-mobile@1x.jpg" width="320" height="360"
-              srcset="img/girl-img-mobile@2x.jpg 2x" alt="Плавец в брызгах воды" fetchpriority="high">
+              srcset="img/girl-img-mobile@2x.jpg 2x" alt="Плавец в брызгах воды" loading="lazy">
           </picture>
         </div>
       </div>
@@ -691,7 +690,7 @@
                   <picture>
                     <source media="(min-width: 768px)" width="80" height="80" type="image/png"
                       srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
-                    <source width="80" height="80" type="image/webp"
+                    <source media="(min-width: 768px)" width="80" height="80" type="image/webp"
                       srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
                     <source width="68" height="68" type="image/webp"
                       srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
@@ -708,7 +707,7 @@
                   <picture>
                     <source media="(min-width: 768px)" width="80" height="80" type="image/png"
                       srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
-                    <source width="80" height="80" type="image/webp"
+                    <source media="(min-width: 768px)" width="80" height="80" type="image/webp"
                       srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
                     <source width="68" height="68" type="image/webp"
                       srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
@@ -727,7 +726,7 @@
                   <picture>
                     <source media="(min-width: 768px)" width="80" height="80" type="image/png"
                       srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
-                    <source width="80" height="80" type="image/webp"
+                    <source media="(min-width: 768px)" width="80" height="80" type="image/webp"
                       srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
                     <source width="68" height="68" type="image/webp"
                       srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
@@ -738,29 +737,13 @@
                 <h4>Просто Мария</h4>
                 <p>«Хожу в Supergym уже больше года.</p>
               </li>
-              <li class="reviews__item swiper-slide" tabindex="0">
-                <div class="reviews__avatar-wrapper">
-                  <picture>
-                    <source media="(min-width: 768px)" width="80" height="80" type="image/png"
-                      srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
-                    <source width="80" height="80" type="image/webp"
-                      srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
-                    <source width="68" height="68" type="image/webp"
-                      srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
-                    <img src="img/avatar-mobile@1x.png" width="68" height="68" srcset="img/avatar-mobile@2x.png 2x"
-                      alt="Екатерина Евсеева." loading="lazy">
-                  </picture>
-                </div>
-                <h4>Анна Орлова</h4>
-                <p>«Хожу в Supergym уже больше года.</p>
-              </li>
             </ul>
           </div>
-          <button class="reviews__button reviews__button--prev button__swiper button__swiper--prev" type="button"
+          <button class="reviews__button reviews__button--prev button-swiper button-swiper--prev" type="button"
             tabindex="-1">
             <span class="visually-hidden">Предыдущий слайд.</span>
           </button>
-          <button class="reviews__button reviews__button--next button__swiper button__swiper--next" type="button"
+          <button class="reviews__button reviews__button--next button-swiper button-swiper--next" type="button"
             tabindex="0">
             <span class="visually-hidden">Следующий слайд.</span>
           </button>
