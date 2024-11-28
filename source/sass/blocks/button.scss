@@ -28,6 +28,119 @@
 
   &--disabled {
     cursor: not-allowed;
+    color: $primary-color;
+    border: 2px solid $primary-color;
     opacity: 0.2;
+  }
+}
+
+.button__swiper {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    @include reset;
+
+    display: block;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: 6px;
+    }
+
+    &--next {
+      right: 6px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 32px;
+      mask-repeat: no-repeat;
+      mask-position: 50% 50%;
+      mask-size: 18px 32px;
+      background-color: $primary-color;
+      mask-image: url("../../__spritemap#sprite-vector-view");
+      transform: rotate(180deg);
+    }
+
+
+    &--next::before {
+      transform: rotate(0);
+    }
+  }
+
+  &:hover {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $background-dark;
+    border-radius: 50px;
+
+    &::before {
+      top: -1px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &--prev:hover,
+  &--prev:focus,
+  &--prev:focus-visible {
+    left: -10px;
+  }
+
+  &--next:hover,
+  &--next:focus,
+  &--next:focus-visible {
+    right: -12px;
+  }
+
+  &:focus,
+  &:focus-visible {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $color-plus;
+    border-radius: 50px;
+    background-color: $color-price-shadow;
+    outline: none;
+
+    &::before {
+      top: -1px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &:active {
+    border: none;
+    border-radius: 50px;
+    background-color: $primary-color;
+
+    &::before {
+      top: -1px;
+      background-color: $color-primary-white;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $color-primary-white;
+    border: none;
+
+    &::before {
+      background-color: $primary-color;
+      opacity: 0.3;
+    }
   }
 }

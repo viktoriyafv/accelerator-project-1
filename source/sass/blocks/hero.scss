@@ -211,6 +211,8 @@
 
   &:disabled {
     opacity: 0.5;
+    color: $color-primary-white;
+    border: 2px solid $color-primary-white;
   }
 }
 

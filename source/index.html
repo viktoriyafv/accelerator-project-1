@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Проект Фитнес зал SUPERGYM. Автор Фадеева Виктория">
   <meta name="author" content="Фадеева Виктория">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUPERGYM Фадеева Виктория</title>
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" href="favicons/favicon-32x32.png">
+  <link rel="icon" href="public/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+  <link rel="manifest" href="manifest.json">
   <link rel="preload" href="fonts/alumnisans/AlumniSans-Bold.woff2" type="font/woff2" as="font">
   <link rel="preload" href="fonts/alumnisans/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font">
   <link rel="preload" href="fonts/alumnisans/AlumniSans-SemiBold.woff2" type="font/woff2" as="font">
@@ -16,7 +19,6 @@
   <link rel="preload" href="fonts/robotocondensed/RobotoCondensed-Regular.woff2" type="font/woff2" as="font">
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="stylesheet" href="sass/vendor/swiper.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </head>
 
 <body class="page-body">
@@ -29,7 +31,7 @@
         <source media="(min-width: 768px)" width="110" height="22" type="image/svg+xml"
           srcset="img/logotype-tablet.svg">
         <img class="hero__logotype logotype" src="img/logotype-mobile.svg" width="100" height="20"
-          alt="Логотип Фитнес центра SUPERGYM">
+          alt="Логотип Фитнес центра SUPERGYM" fetchpriority="high">
       </picture>
       <a class="hero__phone" href="tel:+88005555555">
         8 800 555-55-55
@@ -44,7 +46,7 @@
         Групповые занятия
         Кардио-зона
       </p>
-      <a class="hero__button button" href="#subscriptions">Купить абонемент</a>
+      <a class="hero__button button" href="#price">Купить абонемент</a>
       <div class="hero__wrapper-img">
         <picture>
           <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
@@ -97,13 +99,12 @@
           <source width="320" height="170" type="image/webp"
             srcset="img/video-img-mobile@1x.webp 1x, img/video-img-mobile@2x.webp 2x">
           <img class="about__video" src="img/video-img-mobile@1x.jpg" width="320" height="170"
-            srcset="img/video-img-mobile@2x.jpg 2x" alt="Тренажерный зал" fetchpriority="high">
+            srcset="img/video-img-mobile@2x.jpg 2x" alt="Тренажерный зал" loading="lazy" fetchpriority="low">
         </picture>
         <button class="about__button" type="button"><span class="visually-hidden">Кнопка play</span></button>
       </div>
     </section>
-    <section class="price" data-test="price">
-      <h2 class="visually-hidden">Прайс</h2>
+    <section class="price" data-test="price" id="price">
       <div class="price__wrapper">
         <h3 class="price__title title">Абонементы</h3>
         <div class="price__navigation">
@@ -174,13 +175,6 @@
           </ul>
         </div>
       </div>
-      <div class="price__picture-wrapper">
-        <picture>
-          <source width="275" height="328" type="image/webp" srcset="img/barbell@1x.webp 1x, img/barbell@2x.webp 2x">
-          <img class="price__picture" src="img/barbell@1x.png" width="275" height="328" srcset="img/barbell@2x.png 2x"
-            alt="Блины для штанги" fetchpriority="high">
-        </picture>
-      </div>
     </section>
     <article class="advt-games" data-test="games">
       <div class="advt-games__wrapper">
@@ -215,7 +209,7 @@
             <source width="290" height="290" type="image/webp"
               srcset="img/banner-game-mobile@1x.webp 1x, img/banner-game-mobile@2x.webp 2x">
             <img class="advt-games__picture" src="img/banner-game-mobile@1x.jpg" width="290" height="290"
-              srcset="img/banner-game-mobile@2x.jpg 2x" alt="Плавец в брызгах воды" fetchpriority="high">
+              srcset="img/banner-game-mobile@2x.jpg 2x" alt="Плавец в брызгах воды" loading="lazy" fetchpriority="low">
           </picture>
         </div>
       </div>
@@ -223,118 +217,183 @@
     <section class="juri" data-test="juri">
       <div class="juri__wrapper">
         <h3 class="juri__title title">Жюри</h3>
-        <div class="juri__swiper swiper">
-          <ul class="juri__list swiper__wrapper">
-            <li class="juri__item swiper-slide juri__item--slider" tabindex="0">
-              <figure class="juri__slide" tabindex="0">
-                <picture>
-                  <source width="260" height="300" type="image/webp"
-                    srcset="img/trener-1@1x.webp 1x, img/trener-1@2x.webp 2x">
-                  <img class="juri__image" src="img/trener-1@1x.jpg" width="260" height="300"
-                    srcset="img/trener-1@2x.jpg 2x" alt="Тренер Анна Павлова." loading="lazy">
-                </picture>
-                <figcaption class="juri__body">
-                  <h3 class="juri__heading">Анна Павлова</h3>
-                  <div class="juri__content">
-                    <p class="juri__description">CrossFit</p>
-                    <ul>
-                      <li>Certified Level 7 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт&nbsp;— 7 лет</li>
-                    </ul>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="juri__item swiper-slide juri__item--slider" tabindex="0">
-              <figure class="juri__slide" tabindex="0">
-                <picture>
-                  <source width="260" height="300" type="image/webp"
-                    srcset="img/trener-2@1x.webp 1x, img/trener-2@2x.webp 2x">
-                  <img class="juri__image" src="img/trener-2@1x.jpg" width="260" height="300"
-                    srcset="img/trener-2@2x.jpg 2x" alt="Тренер Алексей Лавров." loading="lazy">
-                </picture>
-                <figcaption class="juri__body">
-                  <h3 class="juri__heading">Алексей Лавров</h3>
-                  <div class="juri__content">
-                    <p class="juri__description">CrossFit</p>
-                    <ul>
-                      <li>Certified Level 3 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт&nbsp;— 6 лет</li>
-                    </ul>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="juri__item swiper-slide juri__item--slider" tabindex="0">
-              <figure class="juri__slide" tabindex="0">
-                <picture>
-                  <source width="260" height="300" type="image/webp"
-                    srcset="img/trener-3@1x.webp 1x, img/trener-3@2x.webp 2x">
-                  <img class="juri__image" src="img/trener-3@1x.jpg" width="260" height="300"
-                    srcset="img/trener-3@2x.jpg 2x" alt="Тренер Александр Пашков." loading="lazy">
-                </picture>
-                <figcaption class="juri__body">
-                  <h3 class="juri__heading">Александр Пашков</h3>
-                  <div class="juri__content">
-                    <p class="juri__description">CrossFit</p>
-                    <ul>
-                      <li>Certified Level 11 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт&nbsp;— 8 лет</li>
-                    </ul>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="juri__item swiper-slide juri__item--slider" tabindex="0">
-              <figure class="juri__slide" tabindex="0">
-                <picture>
-                  <source width="260" height="300" type="image/webp"
-                    srcset="img/trener-4@1x.webp 1x, img/trener-4@2x.webp 2x">
-                  <img class="juri__image" src="img/trener-4@1x.jpg" width="260" height="300"
-                    srcset="img/trener-4@2x.jpg 2x" alt="Тренер Мария Кетова." loading="lazy">
-                </picture>
-                <figcaption class="juri__body">
-                  <h3 class="juri__heading">Мария Кетова</h3>
-                  <div class="juri__content">
-                    <p class="juri__description">CrossFit</p>
-                    <ul>
-                      <li>Certified Level 2 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт&nbsp;— 6 лет</li>
-                    </ul>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="juri__item swiper-slide juri__item--slider" tabindex="0">
-              <figure class="juri__slide" tabindex="0">
-                <picture>
-                  <source width="260" height="300" type="image/webp"
-                    srcset="img/trener-4@1x.webp 1x, img/trener-4@2x.webp 2x">
-                  <img class="juri__image" src="img/trener-4@1x.jpg" width="260" height="300"
-                    srcset="img/trener-4@2x.jpg 2x" alt="Тренер Мария Кетова." loading="lazy">
-                </picture>
-                <figcaption class="juri__body">
-                  <h3 class="juri__heading">Мария Кетова</h3>
-                  <div class="juri__content">
-                    <p class="juri__description">CrossFit</p>
-                    <ul>
-                      <li>Certified Level 2 Trainer</li>
-                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                      <li>Опыт&nbsp;— 6 лет</li>
-                    </ul>
-                  </div>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-          <button class="juri__button juri__button--prev swiper__button-prev" type="button" tabindex="-1">
+        <div class="juri__slider">
+          <div class="juri__swiper swiper">
+            <ul class="juri__list swiper__wrapper">
+              <li class="juri__item swiper-slide" tabindex="0">
+                <figure class="juri__slide" tabindex="0">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="img/trener-1@1x.webp 1x, img/trener-1@2x.webp 2x">
+                    <img class="juri__image" src="img/trener-1@1x.jpg" width="260" height="300"
+                      srcset="img/trener-1@2x.jpg 2x" alt="Тренер Анна Павлова." loading="lazy" fetchpriority="high">
+                  </picture>
+                  <figcaption class="juri__body">
+                    <h3 class="juri__heading">Анна Павлова</h3>
+                    <div class="juri__content">
+                      <p class="juri__description">CrossFit</p>
+                      <ul class="juri__content-list">
+                        <li class="juri__content-item">Certified Level 7 Trainer</li>
+                        <li class="juri__content-item">Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li class="juri__content-item">Опыт&nbsp;— 7 лет</li>
+                      </ul>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="juri__item swiper-slide" tabindex="0">
+                <figure class="juri__slide" tabindex="0">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="img/trener-2@1x.webp 1x, img/trener-2@2x.webp 2x">
+                    <img class="juri__image" src="img/trener-2@1x.jpg" width="260" height="300"
+                      srcset="img/trener-2@2x.jpg 2x" alt="Тренер Алексей Лавров." loading="lazy">
+                  </picture>
+                  <figcaption class="juri__body">
+                    <h3 class="juri__heading">Алексей Лавров</h3>
+                    <div class="juri__content">
+                      <p class="juri__description">CrossFit</p>
+                      <ul class="juri__content-list">
+                        <li class="juri__content-item">Certified Level 3 Trainer</li>
+                        <li class="juri__content-item">Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li class="juri__content-item">Опыт&nbsp;— 6 лет</li>
+                      </ul>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="juri__item swiper-slide" tabindex="0">
+                <figure class="juri__slide" tabindex="0">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="img/trener-3@1x.webp 1x, img/trener-3@2x.webp 2x">
+                    <img class="juri__image" src="img/trener-3@1x.jpg" width="260" height="300"
+                      srcset="img/trener-3@2x.jpg 2x" alt="Тренер Александр Пашков." loading="lazy">
+                  </picture>
+                  <figcaption class="juri__body">
+                    <h3 class="juri__heading">Александр Пашков</h3>
+                    <div class="juri__content">
+                      <p class="juri__description">CrossFit</p>
+                      <ul class="juri__content-list">
+                        <li class="juri__content-item">Certified Level 11 Trainer</li>
+                        <li class="juri__content-item">Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li class="juri__content-item">Опыт&nbsp;— 8 лет</li>
+                      </ul>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="juri__item swiper-slide" tabindex="0">
+                <figure class="juri__slide" tabindex="0">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="img/trener-4@1x.webp 1x, img/trener-4@2x.webp 2x">
+                    <img class="juri__image" src="img/trener-4@1x.jpg" width="260" height="300"
+                      srcset="img/trener-4@2x.jpg 2x" alt="Тренер Мария Кетова." loading="lazy">
+                  </picture>
+                  <figcaption class="juri__body">
+                    <h3 class="juri__heading">Мария Кетова</h3>
+                    <div class="juri__content">
+                      <p class="juri__description">CrossFit</p>
+                      <ul class="juri__content-list">
+                        <li class="juri__content-item">Certified Level 2 Trainer</li>
+                        <li class="juri__content-item">Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li class="juri__content-item">Опыт&nbsp;— 6 лет</li>
+                      </ul>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="juri__item swiper-slide" tabindex="0">
+                <figure class="juri__slide" tabindex="0">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="img/trener-1@1x.webp 1x, img/trener-1@2x.webp 2x">
+                    <img class="juri__image" src="img/trener-1@1x.jpg" width="260" height="300"
+                      srcset="img/trener-1@2x.jpg 2x" alt="Тренер Анна Павловна." loading="lazy" fetchpriority="low">
+                  </picture>
+                  <figcaption class="juri__body">
+                    <h3 class="juri__heading">Анна Павловна</h3>
+                    <div class="juri__content">
+                      <p class="juri__description">CrossFit</p>
+                      <ul class="juri__content-list">
+                        <li class="juri__content-item">Certified Level 7 Trainer</li>
+                        <li class="juri__content-item">Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li class="juri__content-item">Опыт&nbsp;— 7 лет</li>
+                      </ul>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="juri__item swiper-slide" tabindex="0">
+                <figure class="juri__slide" tabindex="0">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="img/trener-2@1x.webp 1x, img/trener-2@2x.webp 2x">
+                    <img class="juri__image" src="img/trener-2@1x.jpg" width="260" height="300"
+                      srcset="img/trener-2@2x.jpg 2x" alt="Тренер Сергей Лавров." loading="lazy" fetchpriority="low">
+                  </picture>
+                  <figcaption class="juri__body">
+                    <h3 class="juri__heading">Сергей Лавров</h3>
+                    <div class="juri__content">
+                      <p class="juri__description">CrossFit</p>
+                      <ul class="juri__content-list">
+                        <li class="juri__content-item">Certified Level 3 Trainer</li>
+                        <li class="juri__content-item">Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li class="juri__content-item">Опыт&nbsp;— 6 лет</li>
+                      </ul>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="juri__item swiper-slide" tabindex="0">
+                <figure class="juri__slide" tabindex="0">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="img/trener-3@1x.webp 1x, img/trener-3@2x.webp 2x">
+                    <img class="juri__image" src="img/trener-3@1x.jpg" width="260" height="300"
+                      srcset="img/trener-3@2x.jpg 2x" alt="Тренер Александр Пушкин." loading="lazy" fetchpriority="low">
+                  </picture>
+                  <figcaption class="juri__body">
+                    <h3 class="juri__heading">Александр Пушкин</h3>
+                    <div class="juri__content">
+                      <p class="juri__description">CrossFit</p>
+                      <ul class="juri__content-list">
+                        <li class="juri__content-item">Certified Level 11 Trainer</li>
+                        <li class="juri__content-item">Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li class="juri__content-item">Опыт&nbsp;— 8 лет</li>
+                      </ul>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="juri__item swiper-slide" tabindex="0">
+                <figure class="juri__slide" tabindex="0">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="img/trener-4@1x.webp 1x, img/trener-4@2x.webp 2x">
+                    <img class="juri__image" src="img/trener-4@1x.jpg" width="260" height="300"
+                      srcset="img/trener-4@2x.jpg 2x" alt="Тренер Инна Разумова." loading="lazy" fetchpriority="low">
+                  </picture>
+                  <figcaption class="juri__body">
+                    <h3 class="juri__heading">Инна Разумова</h3>
+                    <div class="juri__content">
+                      <p class="juri__description">CrossFit</p>
+                      <ul class="juri__content-list">
+                        <li class="juri__content-item">Certified Level 2 Trainer</li>
+                        <li class="juri__content-item">Победитель чемпионата России по&nbsp;CrossFit</li>
+                        <li class="juri__content-item">Опыт&nbsp;— 6 лет</li>
+                      </ul>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+          <button class="juri__button juri__button--prev button__swiper button__swiper--prev" type="button">
             <span class="visually-hidden">Предыдущий слайд.</span>
           </button>
-          <button class="juri__button juri__button--next swiper__button-next" type="button" tabindex="1">
+          <button class="juri__button juri__button--next button__swiper button__swiper--next" type="button">
             <span class="visually-hidden">Следующий слайд.</span>
           </button>
         </div>
@@ -434,8 +493,8 @@
           <li class="faq__item faq__item--active">
             <div>
               <h4>Как стать членом фитнес&#8209;центра?</h4>
-              <button class="faq__list-button faq__list-button--active" type="button"><span
-                  class="visually-hidden">Развернуть/свернуть ответ.</span></button>
+              <button class="faq__list-button" type="button"><span class="visually-hidden">Развернуть/свернуть
+                  ответ.</span></button>
             </div>
             <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать
               договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.
@@ -624,47 +683,85 @@
     <article class="reviews" data-test="reviews">
       <div class="reviews__wrapper">
         <h3 class="reviews__title title">Отзывы</h3>
-        <div class="reviews__slider swiper">
-          <ul class="reviews__list swiper__wrapper">
-            <li class="reviews__item swiper-slide" tabindex="0">
-              <div class="reviews__avatar-wrapper">
-                <picture>
-                  <source media="(min-width: 768px)" width="80" height="80" type="image/png"
-                    srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
-                  <source width="80" height="80" type="image/webp"
-                    srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
-                  <source width="68" height="68" type="image/webp"
-                    srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
-                  <img src="img/avatar-mobile@1x.png" width="68" height="68"
-                    srcset="img/avatar-mobile@2x.png 2x" alt="Анна Орлова." loading="lazy">
-                </picture>
-              </div>
-              <h4>Анна Орлова</h4>
-              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
-                дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-            </li>
-            <li class="reviews__item swiper-slide" tabindex="0">
-              <div class="reviews__avatar-wrapper">
-                <picture>
-                  <source media="(min-width: 768px)" width="80" height="80" type="image/png"
-                    srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
-                  <source width="80" height="80" type="image/webp"
-                    srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
-                  <source width="68" height="68" type="image/webp"
-                    srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
-                  <img src="img/avatar-mobile@1x.png" width="68" height="68"
-                    srcset="img/avatar-mobile@2x.png 2x" alt="Екатерина Евсеева." loading="lazy">
-                </picture>
-              </div>
-              <h4>Анна Орлова</h4>
-              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
-                дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-            </li>
-          </ul>
-          <button class="reviews__button reviews__button--prev swiper__button-prev" type="button" tabindex="-1">
+        <div class="reviews__slider">
+          <div class="reviews__swiper swiper">
+            <ul class="reviews__list swiper__wrapper">
+              <li class="reviews__item swiper-slide" tabindex="0">
+                <div class="reviews__avatar-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" width="80" height="80" type="image/png"
+                      srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
+                    <source width="80" height="80" type="image/webp"
+                      srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
+                    <source width="68" height="68" type="image/webp"
+                      srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
+                    <img src="img/avatar-mobile@1x.png" width="68" height="68" srcset="img/avatar-mobile@2x.png 2x"
+                      alt="Анна Орлова." loading="lazy">
+                  </picture>
+                </div>
+                <h4>Анна Орлова</h4>
+                <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
+                  дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </li>
+              <li class="reviews__item swiper-slide" tabindex="0">
+                <div class="reviews__avatar-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" width="80" height="80" type="image/png"
+                      srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
+                    <source width="80" height="80" type="image/webp"
+                      srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
+                    <source width="68" height="68" type="image/webp"
+                      srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
+                    <img src="img/avatar-mobile@1x.png" width="68" height="68" srcset="img/avatar-mobile@2x.png 2x"
+                      alt="Екатерина Евсеева." loading="lazy" fetchpriority="low">
+                  </picture>
+                </div>
+                <h4>Екатерина Евсеева</h4>
+                <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
+                  дружелюбный. Зал просторный, даже в вечернее время нет очередей» Хожу в Supergym уже больше года.
+                  Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал
+                  дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </li>
+              <li class="reviews__item swiper-slide" tabindex="0">
+                <div class="reviews__avatar-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" width="80" height="80" type="image/png"
+                      srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
+                    <source width="80" height="80" type="image/webp"
+                      srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
+                    <source width="68" height="68" type="image/webp"
+                      srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
+                    <img src="img/avatar-mobile@1x.png" width="68" height="68" srcset="img/avatar-mobile@2x.png 2x"
+                      alt="Просто Мария." loading="lazy" fetchpriority="low">
+                  </picture>
+                </div>
+                <h4>Просто Мария</h4>
+                <p>«Хожу в Supergym уже больше года.</p>
+              </li>
+              <li class="reviews__item swiper-slide" tabindex="0">
+                <div class="reviews__avatar-wrapper">
+                  <picture>
+                    <source media="(min-width: 768px)" width="80" height="80" type="image/png"
+                      srcset="img/avatar-tablet@1x.png 1x, img/avatar-tablet@2x.png 2x">
+                    <source width="80" height="80" type="image/webp"
+                      srcset="img/avatar-tablet@1x.webp 1x, img/avatar-tablet@2x.webp 2x">
+                    <source width="68" height="68" type="image/webp"
+                      srcset="img/avatar-mobile@1x.webp 1x, img/avatar-mobile@2x.webp 2x">
+                    <img src="img/avatar-mobile@1x.png" width="68" height="68" srcset="img/avatar-mobile@2x.png 2x"
+                      alt="Екатерина Евсеева." loading="lazy">
+                  </picture>
+                </div>
+                <h4>Анна Орлова</h4>
+                <p>«Хожу в Supergym уже больше года.</p>
+              </li>
+            </ul>
+          </div>
+          <button class="reviews__button reviews__button--prev button__swiper button__swiper--prev" type="button"
+            tabindex="-1">
             <span class="visually-hidden">Предыдущий слайд.</span>
           </button>
-          <button class="reviews__button reviews__button--next swiper__button-next" type="button" tabindex="1">
+          <button class="reviews__button reviews__button--next button__swiper button__swiper--next" type="button"
+            tabindex="0">
             <span class="visually-hidden">Следующий слайд.</span>
           </button>
         </div>
@@ -767,11 +864,6 @@
 
   <script type="module" src="js/main.js"></script>
 
-
-
-  <!-- <div >reviews</div>
-  <script type="module" src="js/main.js"></script>
-   -->
 </body>
 
 </html>

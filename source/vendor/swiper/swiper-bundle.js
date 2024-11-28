@@ -9694,5 +9694,3 @@ var Swiper = (function () {
   return Swiper;
 
 })();
-
-export default Swiper;

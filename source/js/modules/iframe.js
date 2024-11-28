@@ -8,7 +8,7 @@ const VideoCreate = () => {
   const iframe = document.createElement('iframe');
 
   ButtonVideo.addEventListener('click', () => {
-    iframe.src = 'https://www.youtube.com/watch?v=9TZXsZItgdw';
+    iframe.src = 'https://www.youtube.com/embed/9TZXsZItgdw?si=1fb4CYxLTVY_iqBF';
     iframe.loading = 'lazy';
     iframe.style.display = 'block';
     iframe.style.frameborder = '0';
@@ -18,6 +18,7 @@ const VideoCreate = () => {
     iframe.style.margin = 'auto';
     iframe.style.zIndex = '200';
     iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('allowfullscreen', 'true');
 
     aboutVideo.style.display = 'none';
     ButtonVideo.style.display = 'none';

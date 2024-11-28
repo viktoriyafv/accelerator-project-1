@@ -156,16 +156,34 @@
   }
 
   p {
-    display: none;
+    @include reset;
+
+    height: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    @media (min-width: $tablet-width) {
+      width: 560px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 660px;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 }
 
 .faq__item--active {
   p {
-    @include reset;
-
     display: block;
     width: 238px;
+    height: auto;
     font-family: $secondary-font;
     font-size: 16px;
     line-height: 20px;
@@ -222,19 +240,81 @@
     }
   }
 
-  &--active {
+  &:hover {
     background-color: $color-plus;
-    border: none;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
   }
 
-  &--active::before {
-    background-color: $color-primary-white;
-    mask-image: none;
-    height: 2px;
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $color-plus;
+    background-color: $color-hover-social;
+    outline: none;
 
-    @media (min-width: $tablet-width) {
-      width: 20px;
-      height: 1px;
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border: 1px solid #1C3374;
+    background-color: $color-plus;
+    opacity: 0.3;
+
+    &::before {
+      background-color: $color-plus;
+      opacity: 0.3;
     }
   }
 }
+
+  .faq__item--active .faq__list-button {
+    background-color: $color-plus;
+    border: none;
+
+    &::before {
+      background-color: $color-primary-white;
+      mask-image: none;
+      height: 2px;
+
+      @media (min-width: $tablet-width) {
+        width: 20px;
+        height: 1px;
+      }
+    }
+
+    &:hover {
+      background-color: $color-plus;
+
+      &::before {
+        background-color: $color-primary-white;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      border: 1px solid $color-plus;
+      background-color: $color-hover-social;
+      outline: none;
+
+      &::before {
+        background-color: $color-primary-white;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      border: 1px solid #1C3374;
+      background-color: $color-plus;
+      opacity: 0.3;
+
+      &::before {
+        background-color: $color-plus;
+        opacity: 0.3;
+      }
+    }
+  }
