@@ -1,13 +1,13 @@
-const ButtonVideo = document.querySelector('.about__button');
-const WrapperVideo = document.querySelector('.about__wrapper-video');
+const buttonVideo = document.querySelector('.about__button');
+const wrapperVideo = document.querySelector('.about__wrapper-video');
 const aboutVideo = document.querySelector('.about__video');
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
-const VideoCreate = () => {
+const videoCreate = () => {
 
   const iframe = document.createElement('iframe');
 
-  ButtonVideo.addEventListener('click', () => {
+  buttonVideo.addEventListener('click', () => {
     iframe.src = 'https://www.youtube.com/embed/9TZXsZItgdw?si=1fb4CYxLTVY_iqBF';
     iframe.loading = 'lazy';
     iframe.style.display = 'block';
@@ -21,17 +21,17 @@ const VideoCreate = () => {
     iframe.setAttribute('allowfullscreen', 'true');
 
     aboutVideo.style.display = 'none';
-    ButtonVideo.style.display = 'none';
-    return WrapperVideo.appendChild(iframe);
+    buttonVideo.style.display = 'none';
+    return wrapperVideo.appendChild(iframe);
   });
 
   document.addEventListener('keydown', (evt) => {
     if (isEscapeKey(evt)) {
       iframe.remove();
       aboutVideo.style.display = 'block';
-      ButtonVideo.style.display = 'block';
+      buttonVideo.style.display = 'block';
     }
   });
 };
 
-export { VideoCreate };
+export { videoCreate };

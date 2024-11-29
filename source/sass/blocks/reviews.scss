@@ -49,15 +49,18 @@
   display: flex;
 }
 
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .reviews__item {
   width: 240px;
   height: 328px;
   background-color: $color-plus;
   padding: 30px 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: $color-primary-white;
 
   @media (min-width: $tablet-width) {

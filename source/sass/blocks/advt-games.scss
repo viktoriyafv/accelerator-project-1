@@ -31,6 +31,7 @@
 
   @media (min-width: $tablet-width) {
     width: 300px;
+    height: 348px;
     grid-template-columns: repeat(2, 100px);
     column-gap: 20px;
     row-gap: 10px;
@@ -40,6 +41,7 @@
 
   @media (min-width: $desktop-width) {
     width: 500px;
+    height: 500px;
     grid-template-columns: 168px 1fr;
     column-gap: 77px;
     padding: 60px 80px 98px;

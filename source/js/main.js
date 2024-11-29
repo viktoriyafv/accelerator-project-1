@@ -1,10 +1,10 @@
-import { VideoCreate } from './modules/iframe';
+import { videoCreate } from './modules/iframe';
 import { debouncedResize } from './modules/paragraph';
 import { priceTabs } from './modules/price';
 import { faqTabs } from './modules/tabs';
 import { validForm } from './modules/form';
 import Swiper from 'swiper';
-import '../sass/vendor/swiper-bundle.css';
+import '../sass/vendor/swiper.css';
 import { Navigation } from 'swiper/modules';
 import { accordionCLicked } from './modules/accardion';
 
@@ -44,7 +44,7 @@ const swiperReview = new Swiper('.reviews__swiper', {
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
-    VideoCreate();
+    videoCreate();
     window.addEventListener('resize', debouncedResize);
     window.addEventListener('loading', debouncedResize);
     priceTabs();

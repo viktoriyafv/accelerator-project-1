@@ -18,7 +18,6 @@
   <link rel="preload" href="fonts/robotocondensed/RobotoCondensed-Light.woff2" type="font/woff2" as="font">
   <link rel="preload" href="fonts/robotocondensed/RobotoCondensed-Regular.woff2" type="font/woff2" as="font">
   <link rel="stylesheet" href="sass/style.scss">
-  <link rel="stylesheet" href="sass/vendor/swiper.css">
 </head>
 
 <body class="page-body">
@@ -56,7 +55,7 @@
           <source media="(min-width: 768px)" width="324" height="390" type="image/webp"
             srcset="img/hero-img-tablet@1x.webp 1x, img/hero-img-tablet@2x.webp 2x">
           <source media="(min-width: 768px)" width="324" height="390" type="image/webp" srcset="img/hero-img-tablet@1x.jpg 1x, img/hero-img-tablet@2x.jpg 2x">
-          <img class="hero__picture" src="#" width="324" height="390" alt="Накачанный мужичок" fetchpriority="high">
+          <img class="hero__picture" src="hero-img-desktop@1x.jpg" width="324" height="390" alt="Мужчина. Рекламное лицо фитнес центра SUPERGYM.">
         </picture>
       </div>
     </section>
@@ -82,7 +81,7 @@
           <source width="320" height="280" type="image/webp"
             srcset="img/main-img-mobile@1x.webp 1x, img/main-img-mobile@2x.webp 2x">
           <img class="about__picture" src="img/main-img-mobile@1x.jpg" width="320" height="280"
-            srcset="img/main-img-mobile@2x.jpg 2x" alt="Тренажерный зал" fetchpriority="high">
+            srcset="img/main-img-mobile@2x.jpg 2x" alt="Тренажерный зал" loading="lazy" fetchpriority="low">
         </picture>
       </div>
       <div class="about__wrapper-video">
@@ -98,7 +97,7 @@
           <source width="320" height="170" type="image/webp"
             srcset="img/video-img-mobile@1x.webp 1x, img/video-img-mobile@2x.webp 2x">
           <img class="about__video" src="img/video-img-mobile@1x.jpg" width="320" height="170"
-            srcset="img/video-img-mobile@2x.jpg 2x" alt="Тренажерный зал" fetchpriority="high">
+            srcset="img/video-img-mobile@2x.jpg 2x" alt="Тренажерный зал" loading="lazy" fetchpriority="low">
         </picture>
         <button class="about__button" type="button"><span class="visually-hidden">Кнопка play</span></button>
       </div>
@@ -246,7 +245,7 @@
                     <source width="260" height="300" type="image/webp"
                       srcset="img/trener-2@1x.webp 1x, img/trener-2@2x.webp 2x">
                     <img class="juri__image" src="img/trener-2@1x.jpg" width="260" height="300"
-                      srcset="img/trener-2@2x.jpg 2x" alt="Тренер Алексей Лавров." loading="lazy" fetchpriority="low">
+                      srcset="img/trener-2@2x.jpg 2x" alt="Тренер Алексей Лавров." loading="lazy">
                   </picture>
                   <figcaption class="juri__body">
                     <h3 class="juri__heading">Алексей Лавров</h3>
@@ -267,7 +266,7 @@
                     <source width="260" height="300" type="image/webp"
                       srcset="img/trener-3@1x.webp 1x, img/trener-3@2x.webp 2x">
                     <img class="juri__image" src="img/trener-3@1x.jpg" width="260" height="300"
-                      srcset="img/trener-3@2x.jpg 2x" alt="Тренер Александр Пашков." loading="lazy" fetchpriority="low">
+                      srcset="img/trener-3@2x.jpg 2x" alt="Тренер Александр Пашков." loading="lazy">
                   </picture>
                   <figcaption class="juri__body">
                     <h3 class="juri__heading">Александр Пашков</h3>
@@ -288,7 +287,7 @@
                     <source width="260" height="300" type="image/webp"
                       srcset="img/trener-4@1x.webp 1x, img/trener-4@2x.webp 2x">
                     <img class="juri__image" src="img/trener-4@1x.jpg" width="260" height="300"
-                      srcset="img/trener-4@2x.jpg 2x" alt="Тренер Мария Кетова." loading="lazy" fetchpriority="low">
+                      srcset="img/trener-4@2x.jpg 2x" alt="Тренер Мария Кетова." loading="lazy">
                   </picture>
                   <figcaption class="juri__body">
                     <h3 class="juri__heading">Мария Кетова</h3>
