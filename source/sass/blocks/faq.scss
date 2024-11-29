@@ -1,0 +1,325 @@
+.faq {
+  background-color: $color-secondary-white;
+}
+
+.faq__wrapper {
+  width: 320px;
+  padding: 70px 15px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1366px;
+    padding: 100px 103px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 40px;
+  }
+}
+
+.faq__title {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: 1 / 1 / 2 / 3;
+    margin-bottom: 0;
+    text-align: start;
+  }
+}
+
+.faq__tabs {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 10px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    @include flex-between;
+
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 260px;
+    grid-area: 2 / 1 / 3 / 2;
+    align-items: start;
+    justify-content: flex-start;
+    margin-bottom: auto;
+  }
+}
+
+.faq__button {
+  width: 140px;
+  height: 46px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: none;
+  color: $primary-color;
+  padding: 14px 22px;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 54px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 260px;
+    padding: 18px 48px;
+  }
+
+  &--current {
+    background-image: $color-gradient-button;
+    color: $color-primary-white;
+    border: none;
+  }
+
+  &:active {
+    background-image: $color-gradient-button;
+    color: $color-primary-white;
+    border: none;
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $primary-color;
+    padding: 14px 22px;
+
+    @media (min-width: $desktop-width) {
+      padding: 18px 48px;
+    }
+  }
+}
+
+.faq__list {
+  @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    width: 860px;
+  }
+
+  &:not(.faq__list--active) {
+    display: none;
+  }
+}
+
+.faq__item {
+  padding: 20px 0;
+  border-bottom: 1px solid $color-hover-social;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 23px 0 22px;
+  }
+
+  &:nth-child(1) {
+    border-top: 1px solid $color-hover-social;
+  }
+
+  div {
+    @include flex-between;
+  }
+
+  h4 {
+    @include reset;
+
+    max-width: 238px;
+    font-family: $secondary-font;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+
+    @media (min-width: $tablet-width) {
+      max-width: 560px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 660px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  p {
+    @include reset;
+
+    height: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    @media (min-width: $tablet-width) {
+      width: 560px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 660px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+.faq__item--active {
+  p {
+    display: block;
+    width: 238px;
+    height: auto;
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      width: 560px;
+      font-size: 18px;
+      line-height: 24px;
+      padding-top: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 660px;
+      font-size: 18px;
+      line-height: 24px;
+      padding-top: 22px;
+    }
+  }
+}
+
+.faq__list-button {
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  border: 1px solid $color-plus;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    inset: 0;
+    margin: auto;
+    width: 14px;
+    height: 14px;
+    mask-image: url("../../__spritemap#sprite-plus-view");
+    mask-size: 14px 14px;
+    background-color: $color-plus;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+      mask-size: 20px 20px;
+    }
+  }
+
+  &:hover {
+    background-color: $color-plus;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $color-plus;
+    background-color: $color-hover-social;
+    outline: none;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border: 1px solid #1c3374;
+    background-color: $color-plus;
+    opacity: 0.3;
+
+    &::before {
+      background-color: $color-plus;
+      opacity: 0.3;
+    }
+  }
+}
+
+.faq__item--active .faq__list-button {
+  background-color: $color-plus;
+  border: none;
+
+  &::before {
+    background-color: $color-primary-white;
+    mask-image: none;
+    height: 2px;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 1px;
+    }
+  }
+
+  &:hover {
+    background-color: $color-plus;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $color-plus;
+    background-color: $color-hover-social;
+    outline: none;
+
+    &::before {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border: 1px solid #1c3374;
+    background-color: $color-plus;
+    opacity: 0.3;
+
+    &::before {
+      background-color: $color-plus;
+      opacity: 0.3;
+    }
+  }
+}
